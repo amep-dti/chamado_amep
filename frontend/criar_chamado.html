@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Novo Chamado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1 id="headerTitle">Abrir Novo Chamado</h1>
+        <div>
+            <a href="index.html" class="header-link">Início</a>
+            <a href="meus_chamados.html" class="header-link">Meus Chamados</a>
+            <button id="logoutButton">Sair</button>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <form id="novoChamadoForm">
+            <div class="input-group">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" required>
+            </div>
+            <div class="input-group">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" rows="6" required></textarea>
+            </div>
+            <button type="submit">Enviar Chamado</button>
+            <p id="mensagemForm" class="mensagem-form"></p>
+        </form>
+    </main>
+    
+    <script src="criar_chamado.js"></script>
+</body>
+</html>

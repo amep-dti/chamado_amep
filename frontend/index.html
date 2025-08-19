@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Chamados - Início</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Selecione o Serviço</h1>
+        <div>
+            <a href="meus_chamados.html" class="header-link">Meus Chamados</a>
+            <button id="logoutButton">Sair</button>
+        </div>
+    </header>
+
+    <main class="launcher-container">
+        <div class="launcher-card" data-setor="TI" data-tipo="chamado">
+            <div class="card-icon">
+                <i class="fas fa-desktop"></i> </div>
+            <h2>TI - Chamados</h2>
+            <p>Abrir um chamado para problemas técnicos, como computador que não liga, erros de sistema ou falhas de rede.</p>
+        </div>
+
+        <div class="launcher-card" data-setor="GAS" data-tipo="solicitacao">
+            <div class="card-icon">
+                <i class="fas fa-tools"></i> </div>
+            <h2>Serviços Gerais</h2>
+            <p>Fazer uma solicitação de materiais, manutenção predial, limpeza ou outros serviços gerais.</p>
+        </div>
+
+        <div class="launcher-card" data-setor="RH" data-tipo="solicitacao">
+            <div class="card-icon">
+                <i class="fas fa-users"></i> </div>
+            <h2>Recursos Humanos</h2>
+            <p>Solicitar documentos, informações sobre férias, benefícios ou outros assuntos relacionados ao RH.</p>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

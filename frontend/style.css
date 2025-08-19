@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.mensagem-erro {
+    color: #d93025;
+    margin-top: 1rem;
+    min-height: 1.2em; /* Garante que o layout não "pule" */
+}
+/* Estilos do Dashboard */
+.dashboard-header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#logoutButton {
+    background-color: #d93025;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Sobrescreve o width: 100% anterior */
+}
+
+#logoutButton:hover {
+    background-color: #b0261d;
+}
+
+.dashboard-container {
+    margin-top: 80px; /* Espaço para o header */
+    display: flex;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.chamados-list, .novo-chamado-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chamados-list {
+    flex: 2; /* Ocupa 2/3 do espaço */
+}
+
+.novo-chamado-form {
+    flex: 1; /* Ocupa 1/3 do espaço */
+}
+
+.chamado-card {
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.chamado-card h3 {
+    margin-top: 0;
+}
+
+.status-aberto {
+    color: #007bff;
+    font-weight: bold;
+}
+.status-em_atendimento {
+    color: #ffc107;
+    font-weight: bold;
+}
+.status-fechado {
+    color: #28a745;
+    font-weight: bold;
+}
+/* Estilos do Formulário de Novo Chamado */
+.novo-chamado-form textarea,
+.novo-chamado-form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.mensagem-form {
+    margin-top: 1rem;
+    min-height: 1.2em;
+    font-weight: bold;
+}
+
+.mensagem-sucesso {
+    color: #28a745;
+}
+/* Estilos das Ações do Chamado */
+.chamado-actions {
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.atender-btn {
+    background-color: #ffc107; /* Amarelo */
+}
+
+.atender-btn:hover {
+    background-color: #e0a800;
+}
+
+.fechar-btn {
+    background-color: #28a745; /* Verde */
+}
+
+.fechar-btn:hover {
+    background-color: #218838;
+}
+/* Estilos da Página Inicial (Launcher) */
+.launcher-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 80px; /* Espaço para o header */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
+
+.launcher-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 280px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top: 4px solid #007bff;
+}
+
+.launcher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Cores diferentes para cada card */
+.launcher-card[data-setor="TI"] {
+    border-top-color: #dc3545; /* Vermelho */
+}
+.launcher-card[data-setor="GAS"] {
+    border-top-color: #ffc107; /* Amarelo */
+}
+.launcher-card[data-setor="RH"] {
+    border-top-color: #28a745; /* Verde */
+}
+
+.launcher-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.launcher-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+/* Estilos para os links no header e o novo container de formulário */
+.header-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.header-link:hover {
+    opacity: 0.8;
+}
+
+.form-container {
+    margin-top: 100px;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Pequeno ajuste no body para o form-container funcionar bem */
+body {
+    padding-bottom: 2rem;
+}
